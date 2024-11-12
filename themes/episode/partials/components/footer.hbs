@@ -1,0 +1,40 @@
+{{!-- Parameters: * footerText (text) --}}
+
+<footer class="gh-foot gh-outer">
+    <div class="gh-foot-inner gh-inner">
+        <!-- About and Support Sections -->
+        <div class="flex gap-10">
+            <!-- About Section -->
+            <div class="flex flex-col">
+                <span class="font-normal text-slate-200">About</span>
+                <div class="flex flex-col pl-4 pt-1 space-y-1 text-xs">
+                    <a class="underline underline-offset-4 text-slate-200" target="_blank" href="http://summitinterconnect.com">Product Info</a>
+                    <a class="underline underline-offset-4 text-slate-200" target="_blank" href="http://summitinterconnect.com">Website</a>
+                </div>
+            </div>
+
+            <!-- Support Section -->
+            <div class="flex flex-col">
+                <span class="font-normal text-slate-200">Support</span>
+                <div class="flex flex-col pl-4 pt-1 space-y-1 text-xs">
+                    <a class="underline underline-offset-4 text-slate-200" href="mailto:alpine.support@summitinterconnect.com">Email Support</a>
+                    <a class="underline underline-offset-4 text-slate-200" target="_blank" href="http://summitinterconnect.com">User Guide</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Logo -->
+        <div class="flex items-center">
+            <img alt="Summit Interconnect Logo" loading="lazy" width="150" height="150" decoding="async" class="w-[150px]" src="themes\episode\assets\images\summit-white.svg">
+        </div>
+
+        <!-- Footer Text or Default Message -->
+        <div class="text-center text-xs mt-4 text-slate-200">
+            {{#unless footerText}}
+                {{@site.title}} &copy; {{date format="YYYY"}}. Powered by <a href="https://ghost.org/" target="_blank" rel="noopener" class="underline underline-offset-4 text-slate-200">Ghost</a>
+            {{else}}
+                {{footerText}}
+            {{/unless}}
+        </div>
+    </div>
+</footer>
